@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: head('Início')"></head>
+<body>
+<main class="card welcome">
+    <div class="avatar" th:text="${#strings.substring(username, 0, 1)}">U</div>
+    <h1>Olá, <span th:text="${username}">usuário</span>!</h1>
+    <p class="subtitle">Você entrou com sucesso. Esta é a sua área protegida.</p>
+
+    <form th:action="@{/logout}" method="post">
+        <button type="submit" class="btn">Sair</button>
+    </form>
+</main>
+</body>
+</html>

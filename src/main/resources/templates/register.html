@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: head('Cadastro')"></head>
+<body>
+<main class="card">
+    <div th:replace="fragments :: logo"></div>
+    <h1>Vamos criar sua conta</h1>
+    <p class="subtitle">É rapidinho, prometemos</p>
+
+    <form th:action="@{/register}" th:object="${form}" method="post" novalidate>
+        <div class="field">
+            <label for="username">Usuário</label>
+            <input type="text" id="username" th:field="*{username}" th:classappend="${#fields.hasErrors('username')} ? 'invalid'" autocomplete="username" autofocus>
+            <div class="field-error" th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></div>
+        </div>
+        <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" th:field="*{email}" th:classappend="${#fields.hasErrors('email')} ? 'invalid'" autocomplete="email">
+            <div class="field-error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+        </div>
+        <div class="field">
+            <label for="password">Senha (mín. 8, com letras e números)</label>
+            <input type="password" id="password" th:field="*{password}" th:classappend="${#fields.hasErrors('password')} ? 'invalid'" autocomplete="new-password">
+            <div class="field-error" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
+        </div>
+        <div class="field">
+            <label for="confirmPassword">Confirmar senha</label>
+            <input type="password" id="confirmPassword" th:field="*{confirmPassword}" th:classappend="${#fields.hasErrors('confirmPassword')} ? 'invalid'" autocomplete="new-password">
+            <div class="field-error" th:if="${#fields.hasErrors('confirmPassword')}" th:errors="*{confirmPassword}"></div>
+        </div>
+        <button type="submit" class="btn">Cadastrar</button>
+    </form>
+
+    <div class="links center">
+        <a th:href="@{/login}">← Voltar para o login</a>
+    </div>
+</main>
+</body>
+</html>
