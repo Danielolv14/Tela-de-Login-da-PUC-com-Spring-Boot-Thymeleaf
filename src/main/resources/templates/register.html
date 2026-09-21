@@ -4,8 +4,8 @@
 <body>
 <main class="card">
     <div th:replace="fragments :: logo"></div>
-    <h1>Vamos criar sua conta</h1>
-    <p class="subtitle">É rapidinho, prometemos</p>
+    <h1>Cadastro</h1>
+    <p class="subtitle">Preencha os campos abaixo</p>
 
     <form th:action="@{/register}" th:object="${form}" method="post" novalidate>
         <div class="field">
@@ -32,7 +32,7 @@
     </form>
 
     <div class="links center">
-        <a th:href="@{/login}">← Voltar para o login</a>
+        <a th:href="@{/login}">Voltar para o login</a>
     </div>
 </main>
 </body>

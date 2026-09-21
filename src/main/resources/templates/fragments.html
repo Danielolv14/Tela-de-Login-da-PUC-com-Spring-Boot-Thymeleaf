@@ -3,13 +3,10 @@
 <head th:fragment="head(title)">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title th:text="${title} + ' · SecureAccess'">SecureAccess</title>
+    <title th:text="${title} + ' - SecureAccess'">SecureAccess</title>
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
-<div th:fragment="logo" class="logo">
-    <div class="mark">🔑</div>
-    <span>SecureAccess</span>
-</div>
+<div th:fragment="logo" class="logo">SecureAccess</div>
 </body>
 </html>

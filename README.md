@@ -1,4 +1,4 @@
-# 🔐 SecureAccess — Login, Cadastro e Recuperação de Senha
+# SecureAccess - Login, Cadastro e Recuperação de Senha
 
 Atividade 02 (DIW): aplicação web com **Spring Boot + Thymeleaf + Spring Security** que implementa autenticação, cadastro de usuários e recuperação de senha por email (desafio opcional).
 
@@ -9,7 +9,7 @@ Atividade 02 (DIW): aplicação web com **Spring Boot + Thymeleaf + Spring Secur
 - Senhas armazenadas com **BCrypt**.
 - Área protegida (`/`) inacessível sem autenticação.
 - **Recuperação de senha por email**: token aleatório de uso único, válido por 30 min, guardado apenas como hash SHA-256; a resposta não revela se o email existe.
-- Interface própria, simples e acolhedora: tons quentes, cartão limpo e layout responsivo.
+- Interface própria e responsiva.
 
 ## Endpoints
 
@@ -49,7 +49,7 @@ Requisitos: **Java 8+** e **Maven 3.6+**.
 mvn spring-boot:run
 ```
 
-Acesse <http://localhost:8080>. O banco é um **H2 em arquivo** (`./data/`), criado automaticamente — não é preciso instalar nada.
+Acesse <http://localhost:8080>. O banco é um **H2 em arquivo** (`./data/`), criado automaticamente, não é preciso instalar nada.
 Console do H2 não está habilitado por padrão.
 
 ## Configuração e credenciais

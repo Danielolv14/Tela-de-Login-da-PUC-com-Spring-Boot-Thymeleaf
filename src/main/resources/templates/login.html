@@ -4,8 +4,8 @@
 <body>
 <main class="card">
     <div th:replace="fragments :: logo"></div>
-    <h1>Que bom te ver por aqui</h1>
-    <p class="subtitle">Entre com seus dados para continuar</p>
+    <h1>Entrar</h1>
+    <p class="subtitle">Informe seus dados para acessar</p>
 
     <div class="alert error" th:if="${param.error}">Usuário/email ou senha inválidos.</div>
     <div class="alert success" th:if="${param.logout}">Você saiu da sua conta.</div>
