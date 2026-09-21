@@ -19,14 +19,14 @@ body {
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 6px;
+    border-top: 4px solid #f2b705;
 }
 
 .logo {
     text-align: center;
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
 }
+.logo img { height: 110px; max-width: 100%; }
 
 h1 { font-size: 1.3rem; text-align: center; margin: 0 0 6px; }
 .subtitle { text-align: center; color: #666; font-size: .9rem; margin: 0 0 20px; }
@@ -41,8 +41,8 @@ input[type=text], input[type=email], input[type=password] {
     border-radius: 4px;
     font-size: 1rem;
 }
-input:focus { outline: none; border-color: #c0392b; }
-input.invalid { border-color: #c0392b; }
+input:focus { outline: none; border-color: #005288; }
+input.invalid { border-color: #b3261e; }
 
 .btn {
     width: 100%;
@@ -51,19 +51,19 @@ input.invalid { border-color: #c0392b; }
     border-radius: 4px;
     font-size: 1rem;
     color: #fff;
-    background: #c0392b;
+    background: #005288;
     cursor: pointer;
 }
-.btn:hover { background: #a93226; }
+.btn:hover { background: #003e69; }
 
 .links { display: flex; justify-content: space-between; margin-top: 18px; font-size: .9rem; }
 .links.center { justify-content: center; }
-a { color: #c0392b; }
+a { color: #005288; }
 
 .alert { padding: 9px 10px; border-radius: 4px; font-size: .9rem; margin-bottom: 14px; }
-.alert.error { background: #fdecea; color: #a93226; }
+.alert.error { background: #fdecea; color: #b3261e; }
 .alert.success { background: #e9f6ec; color: #256b3a; }
-.field-error { color: #a93226; font-size: .8rem; margin-top: 4px; }
+.field-error { color: #b3261e; font-size: .8rem; margin-top: 4px; }
 
 .welcome { text-align: center; }
 .welcome .avatar { display: none; }
