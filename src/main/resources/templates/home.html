@@ -3,6 +3,7 @@
 <head th:replace="fragments :: head('Início')"></head>
 <body>
 <main class="card welcome">
+    <div th:replace="fragments :: logo"></div>
     <h1>Olá, <span th:text="${username}">usuário</span>!</h1>
     <p class="subtitle">Você está logado.</p>
 

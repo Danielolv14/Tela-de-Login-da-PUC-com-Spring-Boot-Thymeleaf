@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 @Service
 public class EmailService {
@@ -17,8 +18,11 @@ public class EmailService {
     private final String from;
 
     public EmailService(ObjectProvider<JavaMailSender> sender,
+                        @Value("${spring.mail.host:}") String host,
                         @Value("${app.mail.from:no-reply@secureaccess.local}") String from) {
-        this.sender = sender.getIfAvailable();
+        // o application.properties sempre define spring.mail.host (vazio sem MAIL_HOST), e o Spring cria o
+        // JavaMailSender mesmo assim; por isso o "sem SMTP" é decidido pelo host, e não pela existência do bean
+        this.sender = StringUtils.hasText(host) ? sender.getIfAvailable() : null;
         this.from = from;
     }
 

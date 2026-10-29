@@ -83,7 +83,11 @@ mvn spring-boot:run
 
 ## Prints
 
-_Adicione aqui capturas das telas de login, cadastro e recuperação de senha._
+| <img src="prints/login.png" alt="Login" width="300"/> | <img src="prints/cadastro.png" alt="Cadastro com validação" width="300"/> | <img src="prints/recuperar-senha.png" alt="Recuperar senha" width="300"/> |
+|:---:|:---:|:---:|
+| Login | Cadastro (validação dos campos) | Recuperar senha |
+| <img src="prints/nova-senha.png" alt="Nova senha" width="300"/> | <img src="prints/inicio.png" alt="Área logada" width="300"/> | |
+| Nova senha (link do email) | Área protegida | |
 
 ## Autores
 
